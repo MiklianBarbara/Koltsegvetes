@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Költségvetés</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/headers.css" rel="stylesheet" type="text/css">
+        <link href="css/tabs.css" rel="stylesheet" type="text/css">
+        <link href="https://gaia-components.github.io/gaia-icons/gaia-icons-embedded.css" rel="stylesheet" type="text/css">
+        <link href="css/input_areas.css" rel="stylesheet" type="text/css">
+        <link href="css/buttons.css" rel="stylesheet" type="text/css">
+        <link href="css/action_menu.css" rel="stylesheet" type="text/css">
+        <link href="css/app.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+
+    <body role="application">
+
+        <section role="region" class="skin-dark">
+            <header >
+                <h1 id="cim">Költségvetés</h1>
+            </header>
+
+            <ul role="tablist" class="bb-tablist skin-dark">
+
+                <li id="panel1"  role="presentation">
+                    <a id="tab1" href="#panel1" class="icon" data-icon="add" role="tab" aria-controls="tabpanel1">comms</a>
+                    <div id="tabpanel1" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab1">
+                        <h2>Bevétel</h2>
+                        <hr>
+                        <form>
+                            <p>
+                                <label for="be_osszeg">Összeg:</label> <br>
+                                <input type="number" id="be_osszeg">
+                            </p>
+
+                            <p>
+                                <label for="be_date">Dátum:</label> <br>
+                                <input type="date" id="be_date" name="be_date">
+                            </p>  
+
+                            <p>
+                                <label for="be_kategoria">Kategória</label> <br>
+                                <select id="be_kategoria"></select>
+                            </p> 
+                            <p>
+                                <label for="be_megj">Megjegyzés</label> <br>
+                                <input type="text" id="be_megj" name="be_megj">
+                            </p> 
+                            <p>
+                                <button type="button">Mentés</button>
+                            </p>
+                        </form>
+                    </div>
+                </li>
+
+                <li id="panel2" role="presentation">
+                    <a id="tab2" href="#panel2" class="icon" data-icon="calendar" role="tab" aria-controls="tabpanel2">Kimutatás</a>
+                    <div id="tabpanel2" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab2">
+                        <h2>Kimutatás</h2> 
+                        <hr>
+                        <label>Aktuális egyenleg: </label> <br>
+                        <label id="akt_osszeg"></label>
+                        <hr>
+                        <form data-type="action">
+
+                            <button type="button" id="havi" >Havi bontás</button>
+
+                            <button type="button" id="eves">Éves bontás</button>
+
+                        </form>
+                    </div>
+                </li>
+
+                <li id="panel3" role="presentation" >
+                    <a id="tab3" href="#panel3" class="icon" data-icon="minus" role="tab" aria-controls="tabpanel3">Kiadás</a>
+                    <div id="tabpanel3" class="bb-tabpanel" role="tabpanel" aria-labelledby="tab3">
+                        <h2>Kiadás</h2>
+                        <hr>
+                        <form>
+                            <p>
+                                <label for="ki_osszeg">Összeg:</label> <br>
+                                <input type="number" id="ki_osszeg">
+                            </p>
+
+                            <p>
+                                <label for="ki_date">Dátum:</label> <br>
+                                <input type="date" id="ki_date" name="ki_date">
+                            </p>  
+
+                            <p>
+                                <label for="ki_kategoria">Kategória</label> <br>
+                                <select id="ki_kategoria"></select>
+                            </p> 
+                            <p>
+                                <label for="ki_megj">Megjegyzés</label> <br>
+                                <input type="text" id="ki_megj" name="ki_megj">
+                            </p> 
+                            <p>
+                                <button type="button">Mentés</button>
+                            </p>
+                        </form>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <script>
+            document.getElementById("tab2").click();
+        </script>
+    </body>
+</html>
